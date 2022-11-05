@@ -8,6 +8,6 @@ import (
 func main() {
 
 	var teststring = "Functioneaza"
-	fmt.Printf(teststring)
+	fmt.Printf(teststring) 
 
 }
