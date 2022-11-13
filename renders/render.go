@@ -55,8 +55,8 @@ func createTemplateCache(t string) error {
 
 	templates := []string{
 
-		fmt.Sprintf("./templates/%s", t),
-		"./templates/base.layout.html",
+		fmt.Sprintf("./pagini/%s", t),
+		"./pagini/base.html",
 	}
 
 	// parse the template

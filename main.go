@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
-
 	"github.com/gorilla/mux"
+	"github/actepublice/renders"
 )
 
 func main() {
@@ -17,26 +17,13 @@ func main() {
 
 	fmt.Printf("Starting...")
 
-	// http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-
-	// 	x, err := fmt.Fprintf(w, "ActePublice.Ro %d", contor)
-
-	// 	if err != nil {
-
-	// 		fmt.Println(err)
-	// 	} else {
-	// 		fmt.Println(x)
-	// 	}
-	// 	contor ++
-	// })
-
-	r.HandleFunc("/books/{title}/page/{page}", func(w http.ResponseWriter, r *http.Request){
+	r.HandleFunc("/articole/{articol}", func(w http.ResponseWriter, r *http.Request){
 		
 		parametri := mux.Vars(r)
 
-		fmt.Println(parametri["title"])
+		fmt.Println(parametri["articol"])
 
-		x, err := fmt.Fprintf(w, parametri["title"])
+		x, err := fmt.Fprintf(w, parametri["articol"])
 
 		if err != nil{
 			fmt.Println(err)
@@ -46,7 +33,7 @@ func main() {
 
 	})
 
-	r.HandleFunc("/main", func(w http.ResponseWriter, r *http.Request){
+	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
 
 		x, err := fmt.Fprintf(w, "pagina main")
 
