@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/gorilla/mux"
-	"github/actepublice/renders"
+	"github/cursaru/actepublice/renders"
+	"github/cursaru/actpublice/structures"
 )
 
 func main() {
@@ -23,7 +24,11 @@ func main() {
 
 		fmt.Println(parametri["articol"])
 
+		data := structures.EmptyInteger
+
 		x, err := fmt.Fprintf(w, parametri["articol"])
+
+		renders.RenderTemplate(w, "post.html", da)
 
 		if err != nil{
 			fmt.Println(err)
