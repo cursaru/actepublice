@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/gorilla/mux"
-	"github/cursaru/actepublice/renders"
-	"github/cursaru/actpublice/structures"
+	"github.com/cursaru/actepublice/renders"
+	"github.com/cursaru/actpublice/structures"
 )
 
 func main() {
